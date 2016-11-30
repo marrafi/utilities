@@ -8,14 +8,13 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 
-		String url = "http://solr-master:8983/solr/master_outiz_Product/stringsuggest?q=vetement&qt=%2Fstringsuggest&spellcheck.dictionary=fr&spellcheck.q=vetement&wt=javabin&version=2";
+		String url = "someurl";
 
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(url);
 
 		// add request header
-		request.addHeader("Connection", "Keep-Alive");
-		request.addHeader("User-Agent", "Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0")
+		request.addHeader("User-Agent", "someuseragent")
 		HttpResponse response = client.execute(request);
 
 		println "Sending 'GET' request to URL : " + url
